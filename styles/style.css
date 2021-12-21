@@ -1,8 +1,6 @@
 /* Shared css */
 html {
   box-sizing: border-box;
-
-  font-size: 1.5rem;
 }
 
 * {
@@ -12,7 +10,6 @@ html {
 }
 
 body {
-  /* background: url(../images/image9.png); */
   display: grid;
   grid-template-columns: auto;
 }
@@ -23,7 +20,6 @@ ul {
 
 a {
   text-decoration: none;
-  /* display: inline-block; */
 }
 
 /* end of shared css */
@@ -351,10 +347,15 @@ footer {
 }
 
 footer a {
-  display: grid;
-  grid-template-columns: auto;
+  display: flex;
+  flex-flow: column wrap;
   margin: 0 0.5em;
   align-items: center;
+}
+
+footer a div {
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .footer-icons {
