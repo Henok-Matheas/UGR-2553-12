@@ -1,0 +1,73 @@
+body {
+  background-image: url(../images/image4.png);
+  background-size: cover;
+  background-attachment: fixed;
+  display: block;
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  text-align: center;
+  background-color: darkcyan;
+  margin-top: 0px;
+  height: 50px;
+  width: auto;
+}
+
+nav {
+  padding-top: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a {
+  background-color: indigo;
+  margin-top: 10%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: antiquewhite;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 25%;
+}
+
+h1 {
+  color: aqua;
+}
+
+footer {
+  margin-top: 60%;
+}
+
+a {
+  box-sizing: content-box;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: aquamarine;
+}
+
+h1 {
+  clear: left;
+  display: contents;
+  clear: both;
+  content: normal;
+}
+
+h1::first-letter {
+  color: darkmagenta;
+}
+
+h1:hover {
+  font-size: 8;
+  font-weight: 200;
+  color: brown;
+}

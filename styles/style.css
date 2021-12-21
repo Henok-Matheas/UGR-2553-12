@@ -1,0 +1,365 @@
+/* Shared css */
+html {
+  box-sizing: border-box;
+
+  font-size: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+}
+
+body {
+  /* background: url(../images/image9.png); */
+  display: grid;
+  grid-template-columns: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /* display: inline-block; */
+}
+
+/* end of shared css */
+
+/* Header css */
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+nav {
+  /* overflow: hidden; */
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+nav a {
+  font-size: 0.7rem;
+  border: 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  height: auto;
+  transition-property: border;
+  transition-property: box-shadow;
+}
+
+nav a:hover {
+  color: rgb(28, 97, 28);
+  border: none;
+  align-self: end;
+}
+
+nav a:active {
+  color: green;
+  border: none;
+  box-shadow: none;
+}
+
+/* header css end */
+
+/* main css */
+main {
+  margin: 10% 3vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.home-main {
+  background-image: url("../images/Programmer-bro.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10% 3vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-main h1::before {
+  content: "";
+  color: green;
+  font-size: 2em;
+  animation: opening-tags 10s both step-start infinite;
+}
+@keyframes opening-tags {
+  0% {
+    content: "{";
+  }
+  25% {
+    content: "<";
+  }
+  50% {
+    content: "(";
+  }
+  75% {
+    content: "//";
+  }
+  100% {
+    content: "{";
+  }
+}
+
+.home-main h1::after {
+  content: "";
+  color: green;
+  font-size: 2em;
+  animation: closing-tags 10s both step-start infinite;
+}
+@keyframes closing-tags {
+  0% {
+    content: "}";
+  }
+  25% {
+    content: ">";
+  }
+  50% {
+    content: ")";
+  }
+  75% {
+    content: "//";
+  }
+  100% {
+    content: "}";
+  }
+}
+
+.profile-img {
+  padding: 0 2em 2em;
+  max-width: 25%;
+  height: auto;
+  float: left;
+  transition-property: max-width;
+  transition-property: all;
+  /* transition-property: ; */
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+
+.profile-img:hover {
+  max-width: 30%;
+  transform: rotate(-4deg);
+  height: auto;
+}
+
+.list-header {
+  font-size: 1.5em;
+}
+
+.languages li {
+  margin: 10px 0;
+}
+
+.languages ul li {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 5px;
+}
+
+.progress {
+  margin: 0 2vw;
+  background: rgba(107, 107, 107, 0.5);
+  justify-content: flex-start;
+  border-radius: 3vw;
+  align-items: center;
+  padding: 0 5px;
+  display: flex;
+  height: 1em;
+  width: 25vw;
+}
+
+.progress-value {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+  border-radius: 3vw;
+  background: rgb(55, 55, 206);
+  height: 15px;
+  width: 0;
+}
+#html {
+  animation: html 3s normal forwards;
+}
+
+#css {
+  animation: css 3s normal forwards;
+}
+#js {
+  animation: js 3s normal forwards;
+}
+#java {
+  animation: java 3s normal forwards;
+}
+#python {
+  animation: python 3s normal forwards;
+}
+#cpp {
+  animation: cpp 3s normal forwards;
+}
+#dart {
+  animation: dart 3s normal forwards;
+}
+
+#django {
+  animation: django 3s normal forwards;
+}
+
+#flutter {
+  animation: flutter 3s normal forwards;
+}
+
+#react {
+  animation: react 3s normal forwards;
+}
+
+@keyframes html {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes js {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+@keyframes java {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 55%;
+  }
+}
+
+@keyframes python {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes cpp {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 15%;
+  }
+}
+
+@keyframes dart {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+@keyframes django {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+@keyframes flutter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+@keyframes react {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slider div {
+  border: 1px solid;
+  max-width: 200px;
+  box-shadow: none;
+}
+
+.slider div img {
+  max-width: 200px;
+  box-shadow: none;
+}
+
+/* main css end */
+
+/* footer css */
+footer a img {
+  width: 15px;
+  height: auto;
+  justify-self: center;
+}
+
+footer {
+  margin: 0 3vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /* align-items: c; */
+}
+
+footer a {
+  display: grid;
+  grid-template-columns: auto;
+  margin: 0 0.5em;
+  align-items: center;
+}
+
+.footer-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* footer css end */

@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url(../images/image4.png);
+  background-attachment: fixed;
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  text-align: center;
+  background-color: darkcyan;
+  margin-top: 0px;
+  height: 50px;
+  width: auto;
+}
+
+nav {
+  padding-top: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a {
+  background-color: indigo;
+  margin-top: 10%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: antiquewhite;
+}
+
+main {
+  text-align: center;
+  margin-top: 25%;
+}
+
+form {
+  position: relative;
+  background-color: aquamarine;
+  padding-top: 5px;
+  margin: 25%;
+}
+
+footer {
+  margin-top: 60%;
+}
