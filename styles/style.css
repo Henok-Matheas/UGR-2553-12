@@ -51,7 +51,6 @@ a {
 }
 
 .navigation a {
-  font-size: 0.7rem;
   border: 1px solid;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 0.5em;
@@ -556,10 +555,16 @@ input[type="button"]:hover {
   }
 }
 
+@media screen and (max-width: 360px) {
+  .footer a div {
+    display: none;
+  }
+}
+
 /* main css end */
 
 /* footer css */
-footer {
+.footer {
   background-color: #ddd;
   display: flex;
   position: absolute;
@@ -572,19 +577,19 @@ footer {
   /* align-items: c; */
 }
 
-footer a {
+.footer a {
   display: flex;
   flex-flow: column wrap;
   margin: 0 0.5em;
   align-items: center;
 }
 
-footer a div {
+.footer a div {
   display: flex;
   flex-flow: column wrap;
 }
 
-footer a img {
+.footer a img {
   width: 15px;
   height: auto;
   justify-self: center;
@@ -593,12 +598,6 @@ footer a img {
 .footer-icons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
-
-@media screen and (max-width: 360px) {
-  footer a div {
-    display: none;
-  }
 }
 
 /* footer css end */
