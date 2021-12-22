@@ -165,7 +165,6 @@ main {
     height: auto;
     transition-property: max-width;
     transition-property: all;
-    /* transition-property: ; */
     transition-timing-function: ease-in-out;
     transition-duration: 1s;
   }
@@ -457,27 +456,65 @@ th {
 /* contact page */
 
 form {
-  border: 1px solid;
-  display: grid;
-  padding: 10px;
+  padding: 20px;
   border-radius: 3px;
-  grid-template-rows: auto;
-  row-gap: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
   justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #f2f2f2;
 }
 
 form div {
-  display: flex;
-  flex-flow: column wrap;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.submit {
-  align-self: center;
-  justify-self: center;
+input,
+textarea {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  height: auto;
+  cursor: auto;
+  resize: none;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+}
+
+input[type="button"] {
+  padding: 0.5em 1em;
+  border: 1px solid #551a8b;
+  color: #551a8b;
+  justify-self: center;
+  align-self: center;
+  transition-property: border;
+}
+
+/* padding: 0.5em 1em;
+  height: auto;
+  transition-property: border;
+} */
+
+input[type="button"]:hover {
+  /* color: rgb(28, 97, 28); */
+  background-color: #551a8b;
+  color: #f2f2f2;
+  border: none;
+}
+
+/* responsiveness */
 
 @media screen and (max-width: 360px) {
   form div {
@@ -499,6 +536,18 @@ form div {
 }
 
 @media screen and (max-width: 300px) {
+  table tr th:nth-child(even),
+  table tr td:nth-child(even) {
+    display: none;
+  }
+
+  .languages ul li {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 5px;
+  }
 }
 
 /* main css end */
