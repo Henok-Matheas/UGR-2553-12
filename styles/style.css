@@ -550,6 +550,12 @@ input[type="button"]:hover {
   }
 }
 
+@media screen and (max-width: 360px) {
+  .footer a div {
+    display: none;
+  }
+}
+
 /* main css end */
 
 /* footer css */
@@ -589,10 +595,13 @@ input[type="button"]:hover {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 360px) {
   .footer a div {
     display: none;
   }
 }
 
+=======
+>>>>>>> b5a5a3477753b348ea8c33543c1e86f7d67cece2
 /* footer css end */
