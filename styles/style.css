@@ -11,7 +11,7 @@ html {
 }
 
 .body {
-  width: auto;
+  /* width: 100%; */
   position: relative;
   display: flex;
   flex-flow: column wrap;
@@ -36,7 +36,7 @@ a {
 /* end of shared css */
 
 /* Header css */
-.body-header {
+.header {
   position: sticky;
   top: 0;
   background-color: white;
@@ -51,7 +51,6 @@ a {
 }
 
 .navigation a {
-  font-size: 0.7rem;
   border: 1px solid;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 0.5em;
@@ -76,7 +75,7 @@ a {
 /* header css end */
 
 /* main css */
-.main {
+main {
   margin: 10% 3vw;
   display: flex;
   flex-direction: row;
@@ -486,11 +485,6 @@ input[type="button"] {
   transition-property: border;
 }
 
-/* padding: 0.5em 1em;
-  height: auto;
-  transition-property: border;
-} */
-
 input[type="button"]:hover {
   /* color: rgb(28, 97, 28); */
   background-color: #551a8b;
@@ -556,12 +550,6 @@ input[type="button"]:hover {
   }
 }
 
-@media screen and (max-width: 360px) {
-  .footer a div {
-    display: none;
-  }
-}
-
 /* main css end */
 
 /* footer css */
@@ -599,6 +587,12 @@ input[type="button"]:hover {
 .footer-icons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 360px) {
+  .footer a div {
+    display: none;
+  }
 }
 
 /* footer css end */
