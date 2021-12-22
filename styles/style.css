@@ -10,7 +10,7 @@ html {
   font-size: inherit;
 }
 
-body {
+.body {
   width: auto;
   position: relative;
   display: flex;
@@ -36,21 +36,21 @@ a {
 /* end of shared css */
 
 /* Header css */
-header {
+.body-header {
   position: sticky;
   top: 0;
   background-color: white;
   z-index: 1000;
 }
 
-nav {
+.navigation {
   margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-nav a {
+.navigation a {
   font-size: 0.7rem;
   border: 1px solid;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -61,13 +61,13 @@ nav a {
   transition-property: box-shadow;
 }
 
-nav a:hover {
+.navigation a:hover {
   color: rgb(28, 97, 28);
   border: none;
   align-self: end;
 }
 
-nav a:active {
+.navigation a:active {
   color: green;
   border: none;
   box-shadow: none;
@@ -76,7 +76,7 @@ nav a:active {
 /* header css end */
 
 /* main css */
-main {
+.main {
   margin: 10% 3vw;
   display: flex;
   flex-direction: row;
