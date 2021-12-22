@@ -1,7 +1,7 @@
 /* Shared css */
 html {
   box-sizing: border-box;
-  /* margin: 0px; */
+  margin: 0px;
 }
 
 * {
@@ -11,8 +11,9 @@ html {
 }
 
 body {
+  position: relative;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-rows: auto;
 }
 
 ul {
@@ -30,6 +31,7 @@ header {
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 1000;
 }
 
 nav {
@@ -159,7 +161,7 @@ main {
   .profile-img {
     max-width: 60vw;
     float: none;
-    justify-self: center;
+    display: block;
     height: auto;
     transition-property: max-width;
     transition-property: all;
@@ -368,23 +370,135 @@ th {
 }
 
 /* reference page */
-.slider {
+.sliders {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#slider {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.5s;
+}
+#slider:hover {
+  height: 400px;
+  color: black;
+}
+
+.slider-img {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.slider-img img {
+  max-width: 100%;
+  opacity: 0.4;
+  transition-duration: 0.5s;
+
+  /* padding: 10px; */
+}
+
+#slider:hover .slider-img img {
+  opacity: 1;
+}
+
+#slider::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgb(219, 225, 226);
+  z-index: -1;
+}
+
+#slider::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgb(219, 225, 226);
+  z-index: -2;
+  filter: blur(10px);
+}
+
+.slider-content {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0;
+}
+
+#slider:hover .slider-content {
+  opacity: 1;
+}
+
+/* contact page */
+
+form {
+  border: 1px solid;
+  display: grid;
+  padding: 10px;
+  border-radius: 3px;
+  grid-template-rows: auto;
+  row-gap: 5px;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form div {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
   align-items: center;
 }
 
-.slider div {
-  border: 1px solid;
-  max-width: 200px;
-  box-shadow: none;
+.submit {
+  align-self: center;
+  justify-self: center;
 }
 
-.slider div img {
-  max-width: 200px;
-  box-shadow: none;
+@media screen and (max-width: 360px) {
+  form div {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+  }
+
+  #slider {
+    width: 200px;
+    height: 200px;
+  }
+  #slider:hover {
+    height: 300px;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 300px) {
 }
 
 /* main css end */
@@ -392,13 +506,13 @@ th {
 /* footer css */
 footer {
   background-color: #ddd;
-  top: 100%;
   display: flex;
+  /* position: absolute;
+  bottom: 0; */
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: auto;
   padding: 7px 0;
   /* align-items: c; */
 }
@@ -424,6 +538,12 @@ footer a img {
 .footer-icons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 360px) {
+  footer a div {
+    display: none;
+  }
 }
 
 /* footer css end */
