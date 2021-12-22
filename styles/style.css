@@ -10,13 +10,19 @@ html {
   font-size: inherit;
 }
 
-.body {
+body {
   width: 100%;
   position: relative;
   display: flex;
   flex-flow: column wrap;
   min-height: 100vh;
   /* grid-template-rows: 1fr 20px; */
+}
+
+.body {
+  background-image: url("../images/Programmer-bro.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 ul {
@@ -152,28 +158,6 @@ main {
   max-width: 350px;
   transform: rotate(-4deg);
   height: auto;
-}
-
-@media screen and (max-width: 992px) {
-  .home-main {
-    background-image: none;
-  }
-  .profile-img {
-    max-width: 60vw;
-    float: none;
-    display: block;
-    height: auto;
-    transition-property: max-width;
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-    transition-duration: 1s;
-  }
-
-  .profile-img:hover {
-    max-width: 65vw;
-    transform: rotate(-4deg);
-    height: auto;
-  }
 }
 
 /* skills page */
@@ -515,6 +499,28 @@ input[type="button"]:hover {
 }
 
 /* responsiveness */
+
+@media screen and (max-width: 992px) {
+  .body {
+    background-image: none;
+  }
+  .profile-img {
+    max-width: 60vw;
+    float: none;
+    display: block;
+    height: auto;
+    transition-property: max-width;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+  }
+
+  .profile-img:hover {
+    max-width: 65vw;
+    transform: rotate(-4deg);
+    height: auto;
+  }
+}
 
 @media screen and (max-width: 360px) {
   form div {
