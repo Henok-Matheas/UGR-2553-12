@@ -10,10 +10,13 @@ html {
   font-size: inherit;
 }
 
-body {
+.body {
+  width: 100%;
   position: relative;
-  display: grid;
-  grid-template-rows: auto;
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+  /* grid-template-rows: 1fr 20px; */
 }
 
 ul {
@@ -76,9 +79,6 @@ main {
 }
 
 .home-main {
-  background-image: url("../images/Programmer-bro.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   margin: 10% 3vw;
   flex-direction: row;
   flex-wrap: wrap;
@@ -556,8 +556,8 @@ input[type="button"]:hover {
 footer {
   background-color: #ddd;
   display: flex;
-  /* position: absolute;
-  bottom: 0; */
+  position: absolute;
+  bottom: 0;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
